@@ -1,4 +1,6 @@
 RoutingExtraBundle
 ==================
 
-Symfony2 RoutingExtraBundle for Database routing
+Symfony2 Routing Bundle, for Database Routing.
+
+Install:
