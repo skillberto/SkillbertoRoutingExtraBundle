@@ -1,0 +1,12 @@
+services:
+    skillberto.routing_loader:
+        class: Skillberto\RoutingExtraBundle\Routing\ExtraLoader
+        tags:
+            - { name: routing.loader }
+        arguments:
+            doctrine: "@doctrine.orm.entity_manager"
+    skillberto.system.admin.routing:
+        class: Skillberto\RoutingExtraBundle\Admin\RoutingAdmin
+        tags:
+          - { name: sonata.admin, manager_type: orm, group: System, label: Routing }
+        arguments: [null, Skillberto\RoutingExtraBundle\Entity\Routing, SkillbertoRoutingExtraBundle:RoutingAdmin]        
