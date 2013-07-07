@@ -1,7 +1,7 @@
 {
     "name":         "skillberto/routing-extra-bundle",
     "description":  "This bundle is an extra router. With SonataAdminBundle can routing from database, and create custom database routing",
-    "keywords":     ["menu","database-menu","admin-menu"],
+    "keywords":     ["routing","routing-extra","database-routing"],
     "type":         "symfony-bundle",
     "license":      "MIT",
     "authors":      [
