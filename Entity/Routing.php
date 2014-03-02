@@ -6,84 +6,49 @@ use Doctrine\ORM\Mapping as ORM;
 
 /**
  * Routing
- *
- * @ORM\Table(name="routing")
- * @ORM\Entity
- * @ORM\HasLifecycleCallbacks()
  */
-class Routing
+class Routing extends \Skillberto\AdminBundle\Entity\Base
 {
     /**
-     * @ORM\Id
-     * @ORM\Column(type="integer")
-     * @ORM\GeneratedValue(strategy="AUTO")
-     */
-    protected $id;
-    
-    /**
-     * @ORM\Column(type="string", length=100, nullable=true)
+     * @var string
      */
     protected $name;
-    
+
     /**
-     * @ORM\Column(type="string", length=100, nullable=true)
+     * @var string
      */
     protected $router;
-    
+
     /**
-     * @ORM\Column(type="string", length=100, nullable=true)
+     * @var string
      */
     protected $path;
-    
+
     /**
-     * @ORM\Column(type="string", length=100, nullable=true)
+     * @var string
      */
     protected $defaults;
-    
+
     /**
-     * @ORM\Column(type="string", length=100, nullable=true)
+     * @var string
      */
     protected $requirements;
-    
+
     /**
-     * @ORM\Column(type="string", length=100, nullable=true)
+     * @var string
      */
     protected $options;
-    
+
     /**
-     * @ORM\Column(type="string", length=100, nullable=true)
+     * @var string
      */
     protected $host;
-            
+
     /**
-     * @ORM\Column(type="string", length=100, nullable=true)
+     * @var string
      */
     protected $schemes;
-    
-    /**
-     * @ORM\Column(type="boolean")
-     */
-    protected $active;
-    
-    /**
-     * @ORM\Column(type="datetime")
-     */
-    protected $created;
 
-    /**
-     * @ORM\Column(type="datetime")
-     */
-    protected $modified;
-
-    /**
-     * Get id
-     *
-     * @return integer 
-     */
-    public function getId()
-    {
-        return $this->id;
-    }
 
     /**
      * Set name
@@ -94,7 +59,7 @@ class Routing
     public function setName($name)
     {
         $this->name = $name;
-    
+
         return $this;
     }
 
@@ -107,7 +72,7 @@ class Routing
     {
         return $this->name;
     }
-    
+
     /**
      * Set router
      *
@@ -117,7 +82,7 @@ class Routing
     public function setRouter($router)
     {
         $this->router = $router;
-    
+
         return $this;
     }
 
@@ -140,7 +105,7 @@ class Routing
     public function setPath($path)
     {
         $this->path = $path;
-    
+
         return $this;
     }
 
@@ -155,94 +120,6 @@ class Routing
     }
 
     /**
-     * Set active
-     *
-     * @param float $active
-     * @return Routing
-     */
-    public function setActive($active)
-    {
-        $this->active = $active;
-    
-        return $this;
-    }
-
-    /**
-     * Get active
-     *
-     * @return float 
-     */
-    public function getActive()
-    {
-        return $this->active;
-    }
-
-    /**
-     * Set created
-     *
-     * @param \DateTime $created
-     * @return Routing
-     */
-    public function setCreated($created)
-    {
-        $this->created = $created;
-    
-        return $this;
-    }
-
-    /**
-     * Get created
-     *
-     * @return \DateTime 
-     */
-    public function getCreated()
-    {
-        return $this->created;
-    }
-
-    /**
-     * Set modified
-     *
-     * @param \DateTime $modified
-     * @return Routing
-     */
-    public function setModified($modified)
-    {
-        $this->modified = $modified;
-    
-        return $this;
-    }
-
-    /**
-     * Get modified
-     *
-     * @return \DateTime 
-     */
-    public function getModified()
-    {
-        return $this->modified;
-    }
-    
-    /**
-     * @ORM\PrePersist
-     * @ORM\PreUpdate
-     */
-   public function updatedTimestamps()
-   {
-       $this->setModified(new \DateTime(date('Y-m-d H:i:s')));
-
-       if($this->getCreated() == null)
-       {
-           $this->setCreated(new \DateTime(date('Y-m-d H:i:s')));
-       }
-    }
-    
-    public function __toString()
-    {
-        return $this->getName()?:"";
-    }
-
-    /**
      * Set defaults
      *
      * @param string $defaults
@@ -251,7 +128,7 @@ class Routing
     public function setDefaults($defaults)
     {
         $this->defaults = $defaults;
-    
+
         return $this;
     }
 
@@ -274,7 +151,7 @@ class Routing
     public function setRequirements($requirements)
     {
         $this->requirements = $requirements;
-    
+
         return $this;
     }
 
@@ -297,7 +174,7 @@ class Routing
     public function setOptions($options)
     {
         $this->options = $options;
-    
+
         return $this;
     }
 
@@ -320,7 +197,7 @@ class Routing
     public function setHost($host)
     {
         $this->host = $host;
-    
+
         return $this;
     }
 
@@ -343,7 +220,7 @@ class Routing
     public function setSchemes($schemes)
     {
         $this->schemes = $schemes;
-    
+
         return $this;
     }
 

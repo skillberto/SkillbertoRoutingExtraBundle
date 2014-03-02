@@ -1,0 +1,28 @@
+Skillberto\RoutingExtraBundle\Entity\Routing:
+  type: entity
+  table: skillberto_routing
+  fields:
+    name:
+      type: string
+      nullable: true
+    router:
+      type: string
+      nullable: true
+    path:
+      type: string
+      nullable: true
+    defaults:
+      type: string
+      nullable: true
+    requirements:
+      type: string
+      nullable: true
+    options:
+      type: string
+      nullable: true
+    host:
+      type: string
+      nullable: true
+    schemes:
+      type: string
+      nullable: true

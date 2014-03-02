@@ -9,4 +9,4 @@ services:
         class: Skillberto\RoutingExtraBundle\Admin\RoutingAdmin
         tags:
           - { name: sonata.admin, manager_type: orm, group: System, label: Routing }
-        arguments: [null, Skillberto\RoutingExtraBundle\Entity\Routing, SkillbertoRoutingExtraBundle:RoutingAdmin]        
+        arguments: [null, Skillberto\RoutingExtraBundle\Entity\Routing, SkillbertoRoutingExtraBundle:RoutingAdmin, "@doctrine.orm.entity_manager"]        

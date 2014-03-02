@@ -57,4 +57,10 @@ class ExtraLoader implements LoaderInterface
     
     public function setResolver(LoaderResolverInterface $resolver) {
     }
+    
+    protected function decode($str) {
+        
+        
+        return ;
+    }
 }
